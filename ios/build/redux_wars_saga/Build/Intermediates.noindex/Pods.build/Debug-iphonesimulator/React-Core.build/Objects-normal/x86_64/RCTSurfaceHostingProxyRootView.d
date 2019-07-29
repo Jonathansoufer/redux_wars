@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTRootView.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTBridge.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTBridgeDelegate.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTDefines.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTBridgeModule.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTFrameUpdate.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTInvalidating.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingView.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceDelegate.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceStage.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceSizeMeasureMode.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTAssert.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTUtils.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/RCTRootContentView.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTView.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTBorderStyle.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTComponent.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/React-Core/React/RCTPointerEvents.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/RCTRootViewDelegate.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Base/Surface/RCTSurface.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/yoga/YGEnums.h \
+  /Users/jonathanferreira/Documents/redux_wars_saga/ios/Pods/Headers/Private/yoga/YGMacros.h
