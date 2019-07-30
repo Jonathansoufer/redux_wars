@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { Creators as MoviesActions } from "../../redux/ducks/movies";
 import axios from "axios";
 
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, FlatList } from "react-native";
 
 import {
   Container,
@@ -21,21 +21,24 @@ class DetailMovie extends Component {
     actors: []
   };
 
+  componentDidMount() {
+    this._loadActorFromMovie;
+  }
   _loadActorFromMovie = async item => {
     let res = await axios.get(item);
-    this.setState({ actors: res.data.name });
     const { actors } = this.state;
-
-    this.setState({ actors: [] });
+    this.setState({ actors: [...actors, res.data.name] });
+    console.log(actors);
     return (
       <View>
-        <Text>Actor: {actors}</Text>
+        <Text>Actor Name: {actors}</Text>;
       </View>
     );
   };
 
   render() {
-    const { navigation } = this.props;
+    const { navigation, refreshing } = this.props;
+    const { actors } = this.state;
     const movie = navigation.getParam("item");
     return (
       <Container>
@@ -44,9 +47,21 @@ class DetailMovie extends Component {
             <ItemTitle>Title: {movie.title}</ItemTitle>
             <ItemText>Crawl: {movie.opening_crawl}</ItemText>
             <ListContainer>
-              {movie.characters.map((item, index) => {
-                this._loadActorFromMovie(item);
-              })}
+              <FlatList
+                data={actors}
+                renderItem={item => console.log(actors)}
+              />
+              {/* {movie.characters.map(async item => {
+                let res = await axios.get(item);
+                const { actors } = this.state;
+                this.setState({ actors: [...actors, res.data.name] });
+                console.log(actors); */}
+              {/* // return (
+                //   <View>
+                //     <Text>Actor Name: {actors}</Text>;
+                //   </View>
+                // ); */}
+              {/* })} */}
             </ListContainer>
           </ScrollView>
         </ItemContainer>
