@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { Creators as MoviesActions } from "../../redux/ducks/movies";
 import axios from "axios";
 
-import { View, Text, ScrollView, FlatList } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 
 import {
   Container,
@@ -22,10 +22,12 @@ class DetailMovie extends Component {
   };
 
   componentDidMount() {
-    this._loadActorFromMovie;
+    this._loadActorFromMovie(this.props.item);
   }
+
   _loadActorFromMovie = async item => {
-    let res = await axios.get(item);
+    const movie = navigation.getParam("item");
+    let res = await axios.get(movie.characters);
     const { actors } = this.state;
     this.setState({ actors: [...actors, res.data.name] });
     console.log(actors);
@@ -37,7 +39,7 @@ class DetailMovie extends Component {
   };
 
   render() {
-    const { navigation, refreshing } = this.props;
+    const { navigation } = this.props;
     const { actors } = this.state;
     const movie = navigation.getParam("item");
     return (
@@ -46,23 +48,7 @@ class DetailMovie extends Component {
           <ScrollView>
             <ItemTitle>Title: {movie.title}</ItemTitle>
             <ItemText>Crawl: {movie.opening_crawl}</ItemText>
-            <ListContainer>
-              <FlatList
-                data={actors}
-                renderItem={item => console.log(actors)}
-              />
-              {/* {movie.characters.map(async item => {
-                let res = await axios.get(item);
-                const { actors } = this.state;
-                this.setState({ actors: [...actors, res.data.name] });
-                console.log(actors); */}
-              {/* // return (
-                //   <View>
-                //     <Text>Actor Name: {actors}</Text>;
-                //   </View>
-                // ); */}
-              {/* })} */}
-            </ListContainer>
+            <ListContainer />
           </ScrollView>
         </ItemContainer>
       </Container>
