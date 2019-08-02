@@ -15,6 +15,12 @@ export const ItemText = styled.Text`
   font-weight: 400;
 `;
 
+export const ItemList = styled.Text`
+  color: #ffe202;
+  font-size: 16px;
+  font-weight: 400;
+`;
+
 export const ItemTitle = styled.Text`
   color: #ffe202;
   font-size: 24px;

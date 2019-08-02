@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>13419BD9-05CD-4F25-8268-13385198F324</key>
+		<key>71239A36-DFB3-4C1F-AD32-EAF067404996</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>13419BD9-05CD-4F25-8268-13385198F324.xcactivitylog</string>
+			<string>71239A36-DFB3-4C1F-AD32-EAF067404996.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -30,13 +30,13 @@
 			<key>signature</key>
 			<string>Building workspace redux_wars_saga with scheme redux_wars_saga and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>586054388.85538399</real>
+			<real>586136357.66953397</real>
 			<key>timeStoppedRecording</key>
-			<real>586054390.24778199</real>
+			<real>586136359.440992</real>
 			<key>title</key>
 			<string>Building workspace redux_wars_saga with scheme redux_wars_saga and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>13419BD9-05CD-4F25-8268-13385198F324</string>
+			<string>71239A36-DFB3-4C1F-AD32-EAF067404996</string>
 		</dict>
 	</dict>
 </dict>

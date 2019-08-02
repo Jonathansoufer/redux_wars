@@ -1,41 +1,35 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { Creators as MoviesActions } from "../../redux/ducks/movies";
 import axios from "axios";
 
-import { View, Text, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 
 import {
   Container,
   ItemContainer,
   ItemText,
   ItemTitle,
+  ItemList,
   ListContainer
 } from "./styles";
 
 class DetailMovie extends Component {
   state = {
-    refreshing: false,
-    actors: []
+    actors: [],
+    loading: false
   };
 
   componentDidMount() {
-    this._loadActorFromMovie(this.props.item);
+    this._loadActorFromMovie();
   }
 
-  _loadActorFromMovie = async item => {
-    const movie = navigation.getParam("item");
-    let res = await axios.get(movie.characters);
-    const { actors } = this.state;
-    this.setState({ actors: [...actors, res.data.name] });
-    console.log(actors);
-    return (
-      <View>
-        <Text>Actor Name: {actors}</Text>;
-      </View>
-    );
+  _loadActorFromMovie = () => {
+    const movie = this.props.navigation.getParam("item");
+
+    movie.characters.map(async chars => {
+      const res = await axios.get(chars);
+      this.setState({ actors: [...this.state.actors, res.data.name] });
+    });
   };
 
   render() {
@@ -48,6 +42,14 @@ class DetailMovie extends Component {
           <ScrollView>
             <ItemTitle>Title: {movie.title}</ItemTitle>
             <ItemText>Crawl: {movie.opening_crawl}</ItemText>
+            {/* <FlatList
+              data={[{ actors }]}
+              renderItem={({ actor }) => <ItemText>{actor}</ItemText>}
+              keyExtractor={(actor, index) => index.toString()}
+            /> */}
+            {actors.map(actor => (
+              <ItemList key={actor}>{actor}</ItemList>
+            ))}
             <ListContainer />
           </ScrollView>
         </ItemContainer>

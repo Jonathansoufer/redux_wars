@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 export const Container = styled.View`
   flex: 1;
   background-color: #272b30;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: stretch;
   border-bottom-width: 1;
   border-bottom-color: #ffe202;
@@ -13,13 +13,20 @@ export const ItemText = styled.Text`
   color: #ffe202;
   font-size: 16px;
   font-weight: 400;
+  padding-bottom: 50;
 `;
 
 export const ItemTitle = styled.Text`
   color: #ffe202;
   font-size: 24px;
   font-weight: 800;
-  padding-bottom: 50;
+  padding-bottom: 40;
+`;
+
+export const ItemList = styled.Text`
+  color: #ffe202;
+  font-size: 16px;
+  font-weight: 400;
 `;
 
 export const ItemContainer = styled.View`
