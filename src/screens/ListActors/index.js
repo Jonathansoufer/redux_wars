@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { Creators as ActorsActions } from "../../redux/ducks/actors";
-import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { Creators as ActorsActions } from '../../redux/ducks/actors';
+import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 
-import Header from "../../components/Header/";
-import { Container, ItemText, ItemContainer } from "./styles";
+import Header from '../../components/Header/';
+import { Container, ItemText, ItemContainer } from './styles';
 
 class ListActors extends Component {
   static navigationOptions = { header: null };
@@ -14,12 +14,12 @@ class ListActors extends Component {
   static propTypes = {
     loadActorsRequest: PropTypes.func.isRequired,
     actors: PropTypes.shape({
-      data: PropTypes.array
-    }).isRequired
+      data: PropTypes.array,
+    }).isRequired,
   };
 
   state = {
-    refreshing: false
+    refreshing: false,
   };
 
   componentDidMount() {
@@ -40,14 +40,14 @@ class ListActors extends Component {
     const { refreshing } = this.state;
     return (
       <Container>
-        <Header />
+        <Header title="Actors" />
         <FlatList
           data={actors.data}
           keyExtractor={item => item.name}
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() =>
-                this.props.navigation.navigate("DetailActor", { item })
+                this.props.navigation.navigate('DetailActor', { item })
               }
             >
               <ItemContainer>
@@ -64,7 +64,7 @@ class ListActors extends Component {
 }
 
 const mapStateToProps = state => ({
-  actors: state.actors
+  actors: state.actors,
 });
 
 const mapDispatchToProps = dispatch =>

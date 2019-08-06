@@ -1,10 +1,10 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native';
 
 export const Container = styled.View`
   flex: 1;
   background-color: #272b30;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
   border-bottom-width: 1;
   border-bottom-color: #ffe202;
 `;

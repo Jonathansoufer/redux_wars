@@ -40,7 +40,7 @@ class ListMovies extends Component {
     const { refreshing } = this.state;
     return (
       <Container>
-        <Header />
+        <Header title="Movies" />
         <FlatList
           data={movies.data}
           keyExtractor={item => item.title}
